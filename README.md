@@ -2,7 +2,8 @@
 This repository contains an example Jenkins pipeline configuration (Jenkinsfile) to demonstrate Continuous Integration (CI) processes. The pipeline performs basic tasks such as building, testing, and deploying applications using Jenkins automation. It serves as a template for setting up CI/CD pipelines in Jenkins.
 
 
-# Pre-Requisites:
+# Install Jenkins
+## Pre-Requisites:
  Before installing Jenkins, make sure you meet the following prerequisites:
  ## 01. AWS EC2 Instance:
 - You should have an Ubuntu EC2 instance running (e.g., Ubuntu 24.04.1 LTS).
