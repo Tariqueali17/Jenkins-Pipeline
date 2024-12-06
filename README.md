@@ -4,6 +4,13 @@ This repository contains an example Jenkins pipeline configuration (Jenkinsfile)
 
 #**Prerequisites**:
 Before installing Jenkins, make sure you meet the following prerequisites:
+01-AWS EC2 Instance:
+You should have an Ubuntu EC2 instance running (e.g., Ubuntu 20.04 LTS).
+Security Group should allow access to ports 8080 (for Jenkins Web Interface) and 22 (for SSH).
+Access to EC2 Instance:
+You need an SSH private key (.pem file) to access the EC2 instance.
+Sudo Privileges:
+Ensure your EC2 user has sudo privileges to install packages
 
 **AWS EC2 Instance:**
 You should have an Ubuntu EC2 instance running (e.g., Ubuntu 20.04 LTS).
@@ -18,15 +25,17 @@ Ensure your EC2 user has sudo privileges to install packages.
 **Java (JDK)**
 Run the below commands to install Java and Jenkins
 **Install Java**
-
+```
 sudo apt update
 sudo apt install openjdk-17-jre
-
+```
 **Verify Java is Installed**
-
+```
 java -version
+```
 
 Now, you can proceed with installing Jenkins
+```
 
 curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
@@ -35,6 +44,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt-get update
 sudo apt-get install jenkins
+```
 
 **Note: ** By default, Jenkins will not be accessible to the external world due to the inbound traffic restriction by AWS. Open port 8080 in the inbound traffic rules as show below.
 
