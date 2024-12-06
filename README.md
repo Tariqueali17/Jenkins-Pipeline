@@ -5,7 +5,7 @@ This repository contains an example Jenkins pipeline configuration (Jenkinsfile)
 # Pre-Requisites:
  Before installing Jenkins, make sure you meet the following prerequisites:
  ## 01. AWS EC2 Instance:
-- You should have an Ubuntu EC2 instance running (e.g., Ubuntu 20.04 LTS).
+- You should have an Ubuntu EC2 instance running (e.g., Ubuntu 24.04.1 LTS).
 Security Group should allow access to ports 8080 (for Jenkins Web Interface) and 22 (for SSH).
 ## 02. Access to EC2 Instance:
 - You need an SSH private key (.pem file) to access the EC2 instance.
